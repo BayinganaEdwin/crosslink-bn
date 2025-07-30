@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { DATABASE_URL } = process.env;
+const { DATABASE_URL, DB_USER, DB_HOST, DB_PASSWORD, DB_NAME } = process.env;
 
 if (!DATABASE_URL) {
   console.error('❌ DATABASE_URL is not defined. Check your .env file.');
@@ -9,10 +9,10 @@ if (!DATABASE_URL) {
 
 module.exports = {
   development: {
-    username: 'postgres',
-    password: '1001',
-    database: 'crosslink',
-    host: '127.0.0.1',
+    username: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME,
+    host: DB_HOST,
     dialect: 'postgres',
   },
   staging: {
