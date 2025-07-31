@@ -8,6 +8,19 @@ if (!DATABASE_URL) {
 }
 
 module.exports = {
+  // // ? PROD DB
+  // development: {
+  //   use_env_variable: 'DATABASE_URL',
+  //   dialect: 'postgres',
+  //   dialectOptions: {
+  //     ssl: {
+  //       require: true,
+  //       rejectUnauthorized: false, // Needed for Supabase SSL
+  //     },
+  //   },
+  // },
+
+  // * DEV DB
   development: {
     username: DB_USER,
     password: DB_PASSWORD,
