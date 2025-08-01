@@ -118,4 +118,4 @@ The API provides the following main routes:
 - `npm start` - Start the production server
 - `npm run dev` - Start development server with nodemon
 
-**Note**: Make sure to set up your environment variables properly before running the application. The app will not function without the required database and JWT configuration. 
+**🚨 Note**: Make sure to set up your environment variables properly before running the application. The app will not function without the required database and JWT configuration. 
