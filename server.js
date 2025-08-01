@@ -10,6 +10,7 @@ const reflectionsRoutes = require('./routes/reflections.routes');
 const studentRoutes = require('./routes/student.routes');
 const employerRoutes = require('./routes/employer.routes');
 const reportRoutes = require('./routes/report.routes');
+const schoolRoutes = require('./routes/school.routes');
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -75,6 +76,7 @@ app.use('/api/reflections', reflectionsRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/employers', employerRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/school', schoolRoutes);
 
 ensureDatabaseExists().then(() => {
   sequelize
