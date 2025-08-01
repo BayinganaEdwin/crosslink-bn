@@ -28,7 +28,9 @@ exports.getReflections = async (req, res) => {
         where: { studentId: req.user.id },
       });
     } else if (req.user.role === 'employer' || req.user.role === 'school') {
-      reflections = await Reflection.findAll({ include: [User] });
+      reflections = await Reflection.findAll({
+        include: [{ model: User, as: 'student' }],
+      });
     }
 
     res.json({
